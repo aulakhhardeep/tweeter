@@ -1,0 +1,82 @@
+main {
+  width: 100vw;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+.new-tweet-textarea {
+  border-bottom: 3px solid black;
+  margin-bottom: 5px;
+  color:blueviolet;
+  font-weight: bold;
+  
+}
+
+textarea {
+  height:30px;
+  width: 80%;
+  border: none;
+  resize: none;
+  position: relative;
+  background-color: inherit;
+}
+
+.new-tweet-button {
+  background-color:darkgreen;
+  border-radius: 50px;
+  color:white;
+  display: inline-block;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  border: 0;
+  font-size: 18px;
+}
+
+.counter {
+  color: black;
+}
+
+.counter.exceeded {
+  color:red;
+}
+
+.button-counter {
+  display:flex;
+  justify-content: space-between;
+}
+
+.create-tweet {
+  border:2px solid black;
+  margin-top: 10px;
+  width:70%;
+}
+
+article {
+  border-bottom: 3px solid black;
+  margin:20px;
+}
+
+  .icons {
+  display:flex;
+  justify-content: end;
+  margin: 10px;
+}
+
+i {
+  margin-right: 10px;
+}
+
+.create-tweet:hover {
+  box-shadow: 5px 5px #888888;
+}
+
+.fa-solid:hover {
+  color:turquoise;
+}
