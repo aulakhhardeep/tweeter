@@ -1,25 +1,43 @@
-main {
-  width: 100vw;
-  height: 100%;
-  box-sizing: border-box;
+/* CSS for main section */
+.header-main {
+  align-items: center;
+}
+.container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   margin-bottom: 20px;
+  padding: 10px;
 }
 
+.new-tweet {
+  padding: 15px;
+}
 
+/* CSS for error message */
+.error-message {
+  color:red;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px; 
+  font-weight: 300;
+  width: 400px; 
+  background-color: yellow;
+  padding: 5px; 
+}
+
+/* CSS for error "message and humming about" div*/
 .new-tweet-textarea {
   border-bottom: 3px solid black;
-  margin-bottom: 5px;
-  color:blueviolet;
+  margin-bottom: 10px;
+  color:cadetblue;
   font-weight: bold;
   
 }
 
+
 textarea {
-  height:30px;
+  height: 30px;
   width: 80%;
   border: none;
   resize: none;
@@ -27,10 +45,11 @@ textarea {
   background-color: inherit;
 }
 
+/* CSS for tweet button */
 .new-tweet-button {
-  background-color:darkgreen;
+  background-color: darkgreen;
   border-radius: 50px;
-  color:white;
+  color: white;
   display: inline-block;
   padding: 7px 20px;
   text-align: center;
@@ -39,44 +58,109 @@ textarea {
   font-size: 18px;
 }
 
+/* CSS for tweet counter */
 .counter {
   color: black;
 }
 
 .counter.exceeded {
-  color:red;
+  color: red;
 }
 
 .button-counter {
-  display:flex;
+  display: flex;
   justify-content: space-between;
 }
 
-.create-tweet {
-  border:2px solid black;
-  margin-top: 10px;
-  width:70%;
-}
-
+/* CSS for individual tweet */
 article {
   border-bottom: 3px solid black;
-  margin:20px;
+  margin: 20px;
 }
 
-  .icons {
-  display:flex;
-  justify-content: end;
-  margin: 10px;
+/* CSS for tweet box */
+.tweet-box {
+  background-color: #f5f5f5;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 10px; /*  padding at the bottom for spacing */
+  transition: box-shadow 0.3s; /* transition for smooth shadow effect */
 }
 
-i {
+/* CSS for user section */
+.tweet-box .user {
+  display: flex;
+  align-items: center;
+}
+
+.tweet-box .user .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   margin-right: 10px;
 }
 
-.create-tweet:hover {
-  box-shadow: 5px 5px #888888;
+.tweet-box .user .name {
+  font-size: 16px;
+  font-weight: bold;
 }
 
-.fa-solid:hover {
-  color:turquoise;
+.tweet-box .user .handle {
+  color: #888;
+}
+
+/* CSS for content section */
+.tweet-box .content .text {
+  margin-bottom: 10px;
+}
+
+/* CSS for footer section */
+.tweet-box .footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 2px solid black; /* Add a solid line as the top border */
+  padding-top: 10px; /* Add some padding at the top for spacing */
+}
+
+.tweet-box .footer .timestamp {
+  color: #888;
+  margin-top: 10px;
+}
+
+.tweet-box .footer .icons i {
+  margin-right: 5px;
+  color: #888;
+  transition: color 0.3s; /* transition for smooth color change */
+}
+
+.tweet-box .footer .icons .fa-heart:hover {
+  color: red;
+}
+
+.tweet-box .footer .icons .fa-flag:hover {
+  color: orange;
+}
+
+.tweet-box .footer .icons .fa-retweet:hover {
+  color: blue;
+}
+
+.create-tweet {
+  margin-top: 10px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* shadow effect on tweet box hover */
+.tweet-box:hover {
+  box-shadow: 0 7px 9px grey; 
+}
+
+/* CSS for icons */
+.icons i {
+  margin-right: 10px;
 }

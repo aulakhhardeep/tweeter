@@ -19,16 +19,59 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: Source Sans Pro;
+
 }
 
 main {
   width: 90%;
   margin: 0 auto;
   background-color: inherit;
+}
 
+/* Default styles for all screen sizes */
+
+/* Styles for desktop screens (1024px and above) */
+/* Media queries */
+@media screen and (min-width: 1024px) {
+ 
+  /* CSS for main section */
+  .header-main {
+    display: flex;
+    flex-direction: row;
+  }
+  header {
+    padding-top: 10px;
+    width: 40%;
+  }
+.container {
+  margin-top: 100px;
+  width: 60%;
+}
+  /* CSS for new tweet section */
+  .new-tweet {
+    width: 60%;
+  }
+
+  .new-tweet-textarea {
+    width: 100%;
+  }
+}
+
+ 
+/* Styles for tablet screens (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1023px) {
 
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+/* Styles for small screens and mobile devices */
+@media (max-width: 767px) {
+  
+}
+
+/* Styles for large desktop screens */
+@media (min-width: 1280px) {
+  
+}
+
+
+
