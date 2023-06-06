@@ -3,6 +3,8 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
+
 html {
   box-sizing: border-box;
 }
@@ -20,6 +22,7 @@ body {
   font-size: 24px;
   font-family: Source Sans Pro;
 
+
 }
 
 main {
@@ -33,29 +36,35 @@ main {
 /* Styles for desktop screens (1024px and above) */
 /* Media queries */
 @media screen and (min-width: 1024px) {
- 
   /* CSS for main section */
   .header-main {
     display: flex;
+    height: 1100px;
+    width: 100%;
     flex-direction: row;
-  }
-  header {
-    padding-top: 10px;
-    width: 40%;
-  }
-.container {
-  margin-top: 100px;
-  width: 60%;
-}
-  /* CSS for new tweet section */
-  .new-tweet {
-    width: 60%;
+    justify-content: space-between;
   }
 
-  .new-tweet-textarea {
-    width: 100%;
+  .header-main header {
+    margin: 10px;
+    width: 40%;
+    height: 450px;
+    padding-top: 20px;
   }
+
+
+  .header-main .container {
+    margin: 20px;
+    display:flex;
+    flex-wrap: wrap;
+    width: 55%;
+    height: auto;
+    padding-top: 30px;
+    overflow-y: auto;
+  }
+
 }
+
 
  
 /* Styles for tablet screens (768px to 1024px) */
