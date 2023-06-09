@@ -39,29 +39,36 @@ main {
   /* CSS for main section */
   .header-main {
     display: flex;
+    margin-top: 130px;
     height: 1100px;
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
+    padding: 10px;
+    
   }
 
   .header-main header {
-    margin: 10px;
-    width: 40%;
-    height: 450px;
+    margin: 50px;
+    width: 30%;
+    height: 400x;
     padding-top: 20px;
   }
 
-
   .header-main .container {
-    margin: 20px;
     display:flex;
-    flex-wrap: wrap;
-    width: 55%;
+    flex-direction: column;
+    width: 60%;
     height: auto;
-    padding-top: 30px;
     overflow-y: auto;
+    
   }
+  /* CSS for content section */
+  .header-main .container .tweet-box .content .text {
+  margin-bottom: 10px;
+  height: 60px;
+  overflow-wrap: break-word;
+}
 
 }
 
@@ -70,10 +77,16 @@ main {
 /* Styles for tablet screens (768px to 1024px) */
 @media (min-width: 768px) and (max-width: 1023px) {
 
+
 }
 
 /* Styles for small screens and mobile devices */
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
+  body nav {
+    background-color: darkgoldenrod;
+    background-image: url("https://www.transparenttextures.com/patterns/dust.png");
+    
+  }
   
 }
 

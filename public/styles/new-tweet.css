@@ -1,15 +1,4 @@
 /* CSS for main section */
-.header-main {
-  align-items: center;
-}
-.container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-bottom: 20px;
-  padding: 10px;
-}
 
 .new-tweet {
   padding: 15px;
@@ -114,6 +103,8 @@ article {
 /* CSS for content section */
 .tweet-box .content .text {
   margin-bottom: 10px;
+  height: 100px;
+  overflow-wrap: break-word;
 }
 
 /* CSS for footer section */
