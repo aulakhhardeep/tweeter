@@ -40,18 +40,19 @@ $(document).ready(function() {
     }
   }
   
-  
-
   function loadTweets() {
     $.ajax({
       url: "/tweets",
       method: "GET",
       dataType: "json",
       success: function(tweets) {
+        console.log("Helllo");
         renderTweets(tweets);
       },
       error: function(xhr, status, error) {
         $('.error-text').text("Error loading the content"); 
+        $('.error-message').css('display', 'block'); 
+
       }
     });
   }
