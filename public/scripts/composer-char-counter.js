@@ -3,12 +3,12 @@ $(document).ready(function() {
   $("textarea").on("input", function() {
 
     //getting length of textarea input
-    let inputLength = $(this).val().length;
+    const inputLength = $(this).val().length;
 
     //referencing to the counter element
-    let counter = $(this).closest('.new-tweet').find('.counter');
+    const counter = $(this).closest('.new-tweet').find('.counter');
 
-    let charactersLeft = 140 - inputLength;
+    const charactersLeft = 140 - inputLength;
 
     // Update the counter on the page
     counter.text(charactersLeft);
