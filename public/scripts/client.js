@@ -51,7 +51,7 @@ $(document).ready(function() {
         renderTweets(tweets);
       },
       error: function(xhr, status, error) {
-        console.log("Error loading tweets:", error);
+        $('.error-text').text("Error loading the content"); 
       }
     });
   }
@@ -66,7 +66,7 @@ $(document).ready(function() {
     const tweetText = $(this).find("#tweet-text").val(); // Get the tweet text
 
     // Perform validation checks
-    if (!tweetText) {
+    if (tweetText === " " || tweetText === null || tweetText === "") {
       $('.error-text').text("Tweet content is required."); // Display an error message
       $('.error-message').slideDown();
       return; // Stop the execution
@@ -77,14 +77,15 @@ $(document).ready(function() {
       $('.error-message').slideDown();
       return; // Stop the execution
     }
-
+    $(this).find("#tweet-text").val(" "); //empty textarea on the click of tweet.
+    $(".counter").text('140');//setting the counter to 140 after tweeting.
     // If validation passes, send the form data to the server
     $.ajax({
       url: "/tweets",
       type: "POST",
       data: formData,
       success: function(response) {
-        console.log("Form data sent to the server:", formData);
+        
 
         // Fetch the updated list of tweets
         $.ajax({
@@ -93,9 +94,9 @@ $(document).ready(function() {
           dataType: "json",
           success: function(tweets) {
             renderTweets(tweets); // Re-render the tweets on the page
+            
           },
           error: function(xhr, status, error) {
-            console.log("Error loading tweets:", error);
           }
         });
       }
